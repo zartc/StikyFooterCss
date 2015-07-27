@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Implementation-d</title>
+
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../css/prettify-custom.css" />
+	<link rel="stylesheet" type="text/css" href="../css/application-style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/compatibilityTableStyle.css" />
+
+	<link rel="stylesheet/less" type="text/css" href="implementation-d.less" />
+	<script src="../js/less-1.6.2.min.js"></script>
+</head>
+
+<body>
+<div id="stf-viewport">
+	<div id="stf-header">
+		<div id="header-content" class="container">
+			<table id="compatibility">
+				<colgroup>
+					<col id="firefox" />
+					<col id="chrome" />
+					<col id="ie7" />
+					<col id="ie8" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>firefox</th>
+						<th>chrome</th>
+						<th>ie-7</th>
+						<th>ie-8</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="pass"></td>
+						<td class="pass"></td>
+						<td class="failed"></td>
+						<td class="unknow"></td>
+					</tr>
+				</tbody>
+			</table>
+			<h1>Implementation-d</h1>
+			<a href="http://ryanfait.com/sticky-footer/" target="_blank">technical explanations</a> by <a href="http://ryanfait.com/" target="_blank">Ryan Fait</a>
+			<label class="checkbox"><input id="displayDebugCSS" type="checkbox" />Display debug css</label>
+			<label class="checkbox"><input id="displayCodeStruct" type="checkbox" />Display alternate content</label>
+		</div>
+	</div>
+
+	<div id="body-content" class="container">
+		<div id="sillyText" style="display: none;">
+			<p>Cupcake ipsum dolor sit. Amet jelly liquorice danish liquorice marzipan chocolate cake. Soufflé bear claw tart jujubes carrot cake marshmallow chocolate cake icing wypas.</p>
+			<p>Tiramisu pastry apple pie icing chocolate cake. Gingerbread biscuit croissant. Cotton candy tart caramels fruitcake.</p>
+			<p>Cookie chocolate applicake. Croissant oat cake cake brownie dragée. Chocolate sweet jujubes brownie soufflé marzipan faworki caramels toffee. Gingerbread bonbon carrot cake biscuit candy
+				marzipan.</p>
+			<p>Oat cake topping sugar plum lemon drops jelly beans apple pie cookie. Gingerbread gummies apple pie faworki donut dessert tart. Gummies cotton candy cookie faworki sweet roll dessert wafer
+				chocolate. Pie lemon drops marzipan wypas muffin.</p>
+			<p>Faworki toffee chupa chups. Apple pie pastry pudding cheesecake tart jelly-o icing pie. Lollipop caramels caramels gingerbread candy canes sesame snaps chocolate cake tootsie roll. Cotton
+				candy pudding icing marshmallow bear claw sugar plum.</p>
+		</div>
+		<div id="codeStruct" class="row">
+			<div class="col-md-6">
+<pre class="prettyprint linenums">
+&lt;div id="stf-viewport"&gt;
+    &lt;div id="stf-header"&gt;
+        &lt;!-- your header here --&gt;
+    &lt;/div&gt;
+    &lt;!-- your content here --&gt;
+    &lt;div id="stf-push"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="stf-footer"&gt;
+    &lt;!-- your footer here --&gt;
+&lt;/div&gt;
+</pre>
+			</div>
+			<div class="col-md-6">
+<pre class="prettyprint linenums">
+@topbarHeight:			0;
+@footerHeight:			40px;
+
+html, body {
+	height:				100%;
+	margin:				0;
+}
+
+#stf-viewport {
+	min-height:			100%;
+	height:				auto   !important;
+	height:				100%;
+	margin:				0 auto -@footerHeight;
+
+	#stf-header {
+		/* prevent the header to overlap the topbar */
+		padding-top:	@topbarHeight;
+	}
+}
+
+#stf-footer, #stf-push {
+	height:				@footerHeight;
+}
+</pre>
+			</div>
+		</div>
+	</div>
+
+	<div id="stf-push"></div>
+</div>
+
+<div id="stf-footer">
+	<div id="footer-content" class="container">
+		<span class="linkbar">
+			<a href="http://www.w3schools.com/html/default.asp" rel="help" target="_blank">w3schools</a>
+			<span class="separator">|</span>
+			<a href="http://en.wikipedia.org/wiki/Web_colors" rel="help" target="_blank">Web-colors</a>
+			<span class="separator">|</span>
+			<a href="http://twhttp://getbootstrap.com/" rel="help" target="_blank">Bootstrap</a>
+			<span class="separator">|</span>
+			<a href="http://lesscss.org/" rel="help" target="_blank">LESS css</a>
+			<span class="separator">|</span>
+			<a href="http://docs.jquery.com/Main_Page" rel="help" target="_blank">JQuery</a>
+		</span>
+	</div>
+</div>
+
+<script src="../js/jquery-1.11.0.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/StickyFooterDemo.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		init();
+	});
+</script>
+
+</body>
+</html>

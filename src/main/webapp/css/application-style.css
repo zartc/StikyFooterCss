@@ -1,0 +1,25 @@
+html {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+a, a:link, a:visited {
+	color: royalblue;
+}
+
+a:hover {
+	color: crimson;
+}
+
+#header-content, #body-content, #footer-content {
+	position: relative;
+	padding: 10px;
+}
+
+#stf-footer {
+	background-color: yellowgreen;
+}
+
+#footer-content .linkbar .separator {
+	padding: 0 20px;
+}

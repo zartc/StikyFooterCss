@@ -1,0 +1,17 @@
+#body-content {
+	background-color: white;
+}
+
+
+#stf-viewport {
+	background-color: slategray;
+}
+
+#stf-viewport #stf-header {
+	background-color: palevioletred;
+}
+
+#stf-viewport #stf-body,
+#stf-viewport #stf-push {
+	background-color: lightgray;
+}

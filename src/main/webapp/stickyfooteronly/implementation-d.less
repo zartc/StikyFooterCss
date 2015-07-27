@@ -1,0 +1,23 @@
+@topbarHeight:			0;
+@footerHeight:			40px;
+
+html, body {
+	height:				100%;
+	margin:				0;
+}
+
+#stf-viewport {
+	min-height:			100%;
+	height:				auto   !important;
+	height:				100%;
+	margin:				0 auto -@footerHeight;
+
+	#stf-header {
+		/* prevent the header to overlap the topbar */
+		padding-top:	@topbarHeight;
+	}
+}
+
+#stf-footer, #stf-push {
+	height:				@footerHeight;
+}

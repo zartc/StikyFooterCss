@@ -1,0 +1,22 @@
+pre.prettyprint {
+	/* lighten the border color */
+	border-color: #dadae1;
+
+	/* no need for a bottom marging here,
+	because our code block is never followed by text */
+	margin-bottom: 0;
+
+	font-family: Consolas, monospace;
+	tab-size: 4;
+	line-height: 16px;
+	text-shadow: 1px 1px 0 #ffffff;
+}
+
+ol.linenums li {
+	/* lighten the color of the displayed line numbers */
+	color: #BEBEC5;
+}
+
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+	list-style-type: decimal;
+}

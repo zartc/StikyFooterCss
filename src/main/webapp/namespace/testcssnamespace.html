@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	  xmlns:ns0="http://name.zartcolwing/namespaces/ns0">
+<head>
+	<meta charset="UTF-8">
+	<title>@namespace examples</title>
+
+    <style type="text/css">
+		@namespace xhtml	"http://www.w3.org/1999/xhtml";
+		@namespace ns0		"http://name.zartcolwing/namespaces/ns0";
+		
+		p {
+			color: red;
+		}
+		
+		xhtml|p {
+			color: maroon;
+		}
+		
+		ns0|p {
+			color: yellowgreen;
+		}
+		
+		
+		/* article\:p { */
+		/* 	color: green; */
+		/* } */
+		
+		
+		.ns0|green {
+			color: green;
+		}
+		
+		.ns0:blue {
+			color: blue;
+		}
+		
+		
+		.ns0\:cyan {
+			color: cyan;
+		}
+		
+		.ui:green {
+			color: lime;
+		}
+		
+		.ui\:green {
+			color: lime;
+		}
+		
+		.ui\/green {
+			color: lime;
+		}
+		
+		.ui\\green {
+			color: lime;
+		}
+		
+		.ui\|green {
+			color: lime;
+		}
+    </style>
+</head>
+
+<body>
+	<p>This text must be red, for this test to be meaningful</p>
+	<p class="ui:green">test class="ui:green"</p>
+	<p class="ui/green">test class="ui/green"</p>
+	<p class="ui\green">test class="ui\green"</p>
+	<p class="ui|green">test class="ui|green"</p>
+	<p class="ns0|green">test class="ns0|green"</p>
+	
+	<ns0:p>Text dans le namespace ns0 (should be green)</ns0:p>
+	<p class="ns0:green">Text dans le namespace xhtml mais avec une class dans le namespace ns0 (should be green)</p>
+	<p class="ns0:blue">Text dans le namespace xhtml mais avec une class dans le namespace ns0 (should be blue)</p>
+	<p class="ns0:cyan">Text dans le namespace xhtml mais avec une class dans le namespace ns0 (should be cyan)</p>
+	
+	<xhtml:div>
+		<p>Text dans le namespace xhtml (should be orange)</p>
+	</xhtml:div>
+</body>
+</html>
